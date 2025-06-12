@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Countdown Timer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="timer-container">
+    <h1>Countdown Timer</h1>
+
+    <input type="datetime-local" id="datetime" />
+    <button onclick="startCountdown()">Start Countdown</button>
+    <button onclick="resetCountdown()">Reset Countdown</button>
+
+    <div class="theme-switcher">
+      <button id="themeToggleBtn">Switch Theme</button>
+    </div>
+
+    <div class="progress-container">
+      <div id="progressBar"></div>
+    </div>
+
+    <div id="countdown">
+      <p><span id="days">00</span> Days</p>
+      <p><span id="hours">00</span> Hours</p>
+      <p><span id="minutes">00</span> Minutes</p>
+      <p><span id="seconds">00</span> Seconds</p>
+    </div>
+
+    <div id="timeUpMsg" class="animate-bounce"></div>
+
+    <div class="sound-controls">
+      <button id="stopAlarmBtn" onclick="stopAlarm()" disabled>Stop Alarm</button>
+      <br><br>
+    </div>
+  </div>
+<!-- 🔊 IMPORTANT: Place your alarm audio file in the same folder and update the src if needed -->
+<!-- Example: Replace 'emergency-alarm-with-reverb-29431.mp3' with your own sound file name -->
+  <audio id="alarmSound" src="emergency-alarm-with-reverb-29431.mp3" preload="auto"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
